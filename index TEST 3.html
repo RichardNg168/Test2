@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuki &amp; White — Office Cleaning Services in Singapore Since 1999</title>
+<meta name="description" content="Yuki &amp; White provides daily, thrice-weekly, twice-weekly and weekly office cleaning to commercial offices across Singapore. Licensed, insured, and trusted since 1999.">
+<meta property="og:title" content="Yuki &amp; White — Office Cleaning Services in Singapore">
+<meta property="og:description" content="Commercial office cleaning across Singapore since 1999. Daily to weekly schedules, built around how your office runs.">
+<meta property="og:type" content="website">
+<link rel="icon" href="https://yuki.com.sg/wp-content/uploads/2021/10/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Yuki & White",
+  "description": "Commercial office cleaning services in Singapore since 1999.",
+  "url": "https://yuki.com.sg/",
+  "telephone": "+6563368055",
+  "email": "services@yuki.com.sg",
+  "foundingDate": "1999",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "100 Peck Seah Street, #08-14 PS100",
+    "addressLocality": "Singapore",
+    "postalCode": "079333",
+    "addressCountry": "SG"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "areaServed": "Singapore",
+  "serviceType": ["Office Cleaning", "Carpet Shampooing", "Disinfecting and Fogging", "Indoor Plant Care", "Office Renovation"]
+}
+</script>
+<style>
+/* ==========================================================================
+   Yuki & White — Office Cleaning, Singapore
+   Design tokens
+   ========================================================================== */
+
+:root {
+  /* Colour */
+  --snow:      #F4F6F4;   /* page ground — cool paper white */
+  --paper:     #FFFFFF;   /* cards, panels */
+  --sumi:      #14191A;   /* ink — headings, primary text */
+  --sumi-soft: #33443E;   /* deep slate-green — secondary text (never grey) */
+  --pine:      #2F5D4E;   /* accent — evergreen */
+  --pine-deep: #1F4136;   /* accent pressed */
+  --line:      #D6DCD7;   /* hairlines only */
+  --snow-warm: #EAEEEA;   /* alternating section ground */
+
+  /* Type */
+  --display: 'Zen Old Mincho', 'Songti SC', Georgia, serif;
+  --body:    'Zen Kaku Gothic New', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Space */
+  --gutter:  clamp(1.25rem, 5vw, 4rem);
+  --section: clamp(4.5rem, 9vw, 8rem);
+  --max:     1180px;
+  --measure: 62ch;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--snow);
+  color: var(--sumi-soft);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; height: auto; }
+
+a { color: var(--pine); text-decoration: none; }
+a:hover { color: var(--pine-deep); }
+
+button { font: inherit; color: inherit; }
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  color: var(--sumi);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: clamp(2.6rem, 5.8vw, 4.6rem); line-height: 1.08; }
+h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.18; }
+h3 { font-size: clamp(1.15rem, 1.6vw, 1.35rem); line-height: 1.35; }
+
+p { margin: 0 0 1.15rem; max-width: var(--measure); }
+p:last-child { margin-bottom: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--sumi); color: var(--paper);
+  padding: .75rem 1.25rem; z-index: 200;
+}
+.skip:focus { left: 0; }
+
+/* ==========================================================================
+   Shared primitives
+   ========================================================================== */
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.section { padding-block: var(--section); }
+.section--tint { background: var(--snow-warm); }
+.section--paper { background: var(--paper); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-bottom: 1.4rem;
+}
+.eyebrow .kanji {
+  font-family: var(--display);
+  font-size: 1rem;
+  letter-spacing: 0;
+  vertical-align: -.1em;
+  margin-right: .5rem;
+}
+
+.lede {
+  font-size: clamp(1.1rem, 1.6vw, 1.28rem);
+  line-height: 1.7;
+  color: var(--sumi-soft);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .95rem 1.9rem;
+  border: 1px solid var(--pine);
+  background: var(--pine);
+  color: var(--paper);
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+.btn:hover { background: var(--pine-deep); border-color: var(--pine-deep); color: var(--paper); }
+
+.btn--ghost { background: transparent; color: var(--pine); }
+.btn--ghost:hover { background: var(--pine); color: var(--paper); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 2.2rem; }
+
+/* Text link with rule */
+.tlink {
+  display: inline-block;
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--line);
+  transition: border-color .25s ease;
+}
+.tlink:hover { border-color: var(--pine); }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(10px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-head {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 246, 244, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease, background .3s ease;
+}
+.site-head.is-stuck { border-bottom-color: var(--line); background: rgba(255, 255, 255, .94); }
+
+.head-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 84px;
+}
+
+.brand { display: flex; align-items: center; gap: .85rem; }
+.brand img { height: 40px; width: auto; }
+.brand-name {
+  font-family: var(--display);
+  font-size: 1.18rem;
+  color: var(--sumi);
+  line-height: 1.1;
+}
+.brand-name small {
+  display: block;
+  font-family: var(--body);
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-top: .2rem;
+}
+
+.nav { display: flex; align-items: center; gap: 2.1rem; }
+.nav a {
+  font-size: .82rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--sumi);
+  position: relative;
+  padding-block: .35rem;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--pine);
+  transition: width .3s ease;
+}
+.nav a:hover::after, .nav a[aria-current="page"]::after { width: 100%; }
+.nav a[aria-current="page"] { color: var(--pine); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  width: 46px; height: 46px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle span {
+  display: block; width: 18px; height: 1px;
+  background: var(--sumi);
+  position: relative;
+}
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: ''; position: absolute; left: 0;
+  width: 18px; height: 1px; background: var(--sumi);
+}
+.nav-toggle span::before { top: -6px; }
+.nav-toggle span::after { top: 6px; }
+
+@media (max-width: 900px) {
+  .nav-toggle { display: inline-flex; }
+  .nav {
+    position: fixed;
+    inset: 84px 0 auto 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 1rem var(--gutter) 2rem;
+    transform: translateY(-120%);
+    transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+  }
+  .nav.is-open { transform: none; }
+  .nav a { padding: .95rem 0; width: 100%; border-bottom: 1px solid var(--line); font-size: .95rem; }
+  .nav .btn { margin-top: 1.4rem; border-bottom: 1px solid var(--pine); }
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero { padding-top: clamp(3.5rem, 7vw, 6rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.hero h1 { margin-bottom: 1.6rem; }
+.hero h1 em {
+  font-style: normal;
+  display: block;
+  color: var(--pine);
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  margin-top: 3rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--line);
+}
+.hero-meta div { min-width: 92px; }
+.hero-meta .num {
+  font-family: var(--display);
+  font-size: 1.9rem;
+  color: var(--sumi);
+  line-height: 1;
+  display: block;
+}
+.hero-meta .cap {
+  font-size: .7rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-top: .55rem;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   Signature: the cleaning cadence rail
+   -------------------------------------------------------------------------- */
+
+.cadence {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.cadence-opts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
+  margin-bottom: 2.2rem;
+}
+.cad-opt {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: .7rem .5rem;
+  font-size: .74rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--sumi-soft);
+  cursor: pointer;
+  transition: border-color .25s ease, color .25s ease, background .25s ease;
+}
+.cad-opt:hover { border-color: var(--pine); color: var(--pine); }
+.cad-opt.is-on { background: var(--pine); border-color: var(--pine); color: var(--paper); }
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: .5rem;
+  align-items: end;
+}
+.day { text-align: center; }
+.mark {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.9;
+  border: 1px solid var(--line);
+  background: transparent;
+  transform-origin: bottom;
+  transition: background .4s ease, border-color .4s ease, transform .4s cubic-bezier(.34, 1.3, .64, 1);
+}
+.day.is-visit .mark {
+  background: var(--pine);
+  border-color: var(--pine);
+}
+.dl {
+  display: block;
+  font-size: .64rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sumi-soft);
+  margin-top: .7rem;
+}
+.day.is-visit .dl { color: var(--pine); }
+
+.cadence-note {
+  margin: 2rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  font-size: .95rem;
+  min-height: 3.4rem;
+}
+
+/* ==========================================================================
+   Split blocks (text + image)
+   ========================================================================== */
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: center;
+}
+.split--reverse .split-media { order: -1; }
+.split-media img { width: 100%; object-fit: cover; }
+.split-media--tall img { aspect-ratio: 4 / 5; }
+
+@media (max-width: 860px) {
+  .split { grid-template-columns: 1fr; }
+  .split--reverse .split-media { order: 0; }
+}
+
+/* ==========================================================================
+   Service cards
+   ========================================================================== */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 3.5rem;
+}
+
+.card {
+  background: var(--paper);
+  padding: clamp(1.9rem, 3vw, 2.6rem);
+  display: flex;
+  flex-direction: column;
+  transition: background .3s ease;
+}
+.card:hover { background: var(--snow-warm); }
+.card img { height: 52px; width: auto; margin-bottom: 1.6rem; }
+.card h3 { margin-bottom: .9rem; }
+.card p { font-size: .98rem; margin-bottom: 1.8rem; }
+.card .tlink { margin-top: auto; align-self: flex-start; }
+
+/* ==========================================================================
+   Checklist
+   ========================================================================== */
+
+.checklist {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 3rem;
+}
+.checklist li {
+  break-inside: avoid;
+  padding: .6rem 0 .6rem 1.6rem;
+  position: relative;
+  font-size: .98rem;
+  border-bottom: 1px solid var(--line);
+}
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 1.15rem;
+  width: 6px; height: 6px;
+  background: var(--pine);
+}
+@media (max-width: 700px) { .checklist { columns: 1; } }
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+
+.faq { margin-top: 3rem; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.6rem 3rem 1.6rem 0;
+  position: relative;
+  font-family: var(--display);
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 1.4;
+  color: var(--sumi);
+  transition: color .25s ease;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--pine); }
+.faq summary::after,
+.faq summary::before {
+  content: '';
+  position: absolute;
+  right: .35rem;
+  background: var(--pine);
+  transition: transform .3s ease, opacity .3s ease;
+}
+.faq summary::before { top: calc(1.6rem + .7em); width: 14px; height: 1px; }
+.faq summary::after  { top: calc(1.6rem + .7em - 6.5px); right: calc(.35rem + 6.5px); width: 1px; height: 14px; }
+.faq details[open] summary::after { opacity: 0; transform: rotate(90deg); }
+.faq .answer { padding: 0 3rem 1.9rem 0; }
+.faq .answer p { font-size: .99rem; }
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.info-block { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-bottom: 2.4rem; }
+.info-block h3 { font-family: var(--body); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--pine); margin-bottom: .9rem; }
+.info-block p, .info-block address { font-style: normal; font-size: 1.02rem; }
+.info-block a { color: var(--sumi); border-bottom: 1px solid var(--line); }
+.info-block a:hover { color: var(--pine); border-color: var(--pine); }
+
+.form { background: var(--paper); border: 1px solid var(--line); padding: clamp(1.75rem, 4vw, 3rem); }
+.field { margin-bottom: 1.5rem; }
+.field label {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-bottom: .6rem;
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: .85rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--sumi);
+  border-radius: 0;
+  transition: border-color .25s ease;
+}
+.field textarea { resize: vertical; min-height: 110px; }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--pine);
+}
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 560px) { .field-row { grid-template-columns: 1fr; } }
+.hp { position: absolute; left: -9999px; }
+
+.map { border: 1px solid var(--line); margin-top: 1rem; }
+.map iframe { display: block; width: 100%; height: 320px; border: 0; }
+
+/* ==========================================================================
+   CTA band
+   ========================================================================== */
+
+.band {
+  background: var(--sumi);
+  color: #E9EDE9;
+  text-align: center;
+  padding-block: clamp(4rem, 8vw, 6.5rem);
+}
+.band h2 { color: var(--paper); margin-bottom: 1.2rem; }
+.band p { margin-inline: auto; color: #E9EDE9; }
+.band .btn { background: var(--paper); border-color: var(--paper); color: var(--sumi); margin-top: 2.4rem; }
+.band .btn:hover { background: var(--pine); border-color: var(--pine); color: var(--paper); }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-foot {
+  background: var(--sumi);
+  color: #E9EDE9;
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+  padding-bottom: 2rem;
+}
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(233, 237, 233, .18);
+}
+@media (max-width: 860px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .foot-grid { grid-template-columns: 1fr; } }
+
+.foot-grid h4 {
+  font-family: var(--body);
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #9FC2B2;
+  margin-bottom: 1.2rem;
+}
+.foot-grid ul { list-style: none; margin: 0; padding: 0; }
+.foot-grid li { margin-bottom: .7rem; }
+.foot-grid a, .foot-grid p, .foot-grid address {
+  color: #E9EDE9;
+  font-size: .96rem;
+  font-style: normal;
+}
+.foot-grid a:hover { color: #9FC2B2; }
+
+.foot-mark { font-family: var(--display); font-size: 1.4rem; color: var(--paper); margin-bottom: 1rem; }
+
+.foot-base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.8rem;
+  font-size: .82rem;
+  color: #C6D2CB;
+}
+
+/* ==========================================================================
+   Page header (inner pages)
+   ========================================================================== */
+
+.page-head {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--line);
+}
+.page-head h1 { max-width: 18ch; margin-bottom: 1.4rem; }
+.page-head .lede { max-width: 56ch; }
+
+/* ==========================================================================
+   Motion preferences
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+
+/* --- Single-file view routing --- */
+.view { display: none; }
+.view.is-active { display: block; animation: viewIn .45s ease; }
+@keyframes viewIn { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .view.is-active { animation: none; } }
+.form-msg { margin-top: 1.2rem; font-size: .95rem; color: var(--pine); }
+.form-msg:empty { margin: 0; }
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#/home">
+      <img src="https://yuki.com.sg/wp-content/uploads/2021/10/logo.png" alt="Yuki &amp; White">
+      <span class="brand-name">Yuki &amp; White<small>Since 1999</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#/home" data-route="home">Home</a>
+      <a href="#/about" data-route="about">About Us</a>
+      <a href="#/services" data-route="services">Services</a>
+      <a href="#/faq" data-route="faq">FAQ</a>
+      <a href="#/contact" data-route="contact">Contact</a>
+      <a class="btn" href="#/contact">Request a quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="view" id="view-home" role="region" aria-label="home">
+
+
+  <!-- Hero -->
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow"><span class="kanji">雪</span>Commercial office cleaning · Singapore</span>
+        <h1>Your office, returned to order.<em>Before the first meeting.</em></h1>
+        <p class="lede">We have cleaned Singapore's commercial offices since 1999 — quietly, on a schedule that fits the way your floor actually runs.</p>
+        <div class="btn-row">
+          <a class="btn" href="#/contact">Request a quote</a>
+          <a class="btn btn--ghost" href="#/services">See our services</a>
+        </div>
+        <div class="hero-meta">
+          <div><span class="num">1999</span><span class="cap">Established</span></div>
+          <div><span class="num">20+</span><span class="cap">Years on site</span></div>
+          <div><span class="num">Island-wide</span><span class="cap">Coverage</span></div>
+        </div>
+      </div>
+
+      <!-- Signature: cleaning cadence -->
+      <div class="cadence reveal" id="cadence">
+        <span class="eyebrow">Choose your rhythm</span>
+        <div class="cadence-opts">
+          <button class="cad-opt is-on" type="button" aria-pressed="true" data-days="0,1,2,3,4"
+                  data-note="Daily. A full clean every working day — best for open-plan floors, shared pantries and offices with visitors.">Daily</button>
+          <button class="cad-opt" type="button" aria-pressed="false" data-days="0,2,4"
+                  data-note="Three times weekly. Monday, Wednesday and Friday — the most common schedule for mid-sized offices.">3&times; weekly</button>
+          <button class="cad-opt" type="button" aria-pressed="false" data-days="1,3"
+                  data-note="Twice weekly. Tuesday and Thursday, with washrooms and pantry kept in check between visits.">2&times; weekly</button>
+          <button class="cad-opt" type="button" aria-pressed="false" data-days="2"
+                  data-note="Once weekly. A single thorough clean, suited to smaller offices and hybrid teams.">Weekly</button>
+        </div>
+        <div class="week">
+          <div class="day"><span class="mark"></span><span class="dl">Mon</span></div>
+          <div class="day"><span class="mark"></span><span class="dl">Tue</span></div>
+          <div class="day"><span class="mark"></span><span class="dl">Wed</span></div>
+          <div class="day"><span class="mark"></span><span class="dl">Thu</span></div>
+          <div class="day"><span class="mark"></span><span class="dl">Fri</span></div>
+          <div class="day"><span class="mark"></span><span class="dl">Sat</span></div>
+        </div>
+        <p class="cadence-note">Daily. A full clean every working day — best for open-plan floors, shared pantries and offices with visitors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--tint">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>One team for the whole floor.</h2>
+        <p class="lede">Cleaning and disinfecting surfaces lowers the risk of infection and keeps a workplace pleasant to walk into. We handle the cleaning, the carpets, the air and the plants — so you deal with one company, not four.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2021/10/icon-1.png" alt="">
+          <h3>Office cleaning</h3>
+          <p>Daily, thrice-weekly, twice-weekly or weekly cleaning for commercial offices, tailored to your operating hours.</p>
+          <a class="tlink" href="#/services" data-anchor="office">Read more</a>
+        </article>
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2024/04/carpet-shampoo.png" alt="">
+          <h3>Carpet shampooing</h3>
+          <p>Professional extraction that lifts soil and neutralises odour from the fibre, so carpet looks and smells new again.</p>
+          <a class="tlink" href="#/services" data-anchor="carpet">Read more</a>
+        </article>
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2021/10/icon-2.png" alt="">
+          <h3>Indoor plants</h3>
+          <p>Supply, placement and scheduled watering of indoor pot plants — greenery your team never has to remember.</p>
+          <a class="tlink" href="#/services" data-anchor="plants">Read more</a>
+        </article>
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2022/02/icon-2.png" alt="">
+          <h3>Fogging &amp; disinfecting</h3>
+          <p>Scheduled or on-call disinfecting of high-touch surfaces, plus fogging for a full-floor reset.</p>
+          <a class="tlink" href="#/services" data-anchor="disinfect">Read more</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome -->
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Welcome to Yuki &amp; White</span>
+        <h2>Twenty years of quiet consistency.</h2>
+        <p>Since 1999 we have provided office and commercial cleaning across Singapore. Over that time we have added the services our clients kept asking for — office renovation and fit-out, fogging and disinfecting, and a growing indoor plant business.</p>
+        <p>When you engage Yuki &amp; White as your commercial cleaning company, the right measures are already in place to keep your workplace healthy and safe. Our team is selected carefully, because the promise is only worth what the person on your floor delivers.</p>
+        <a class="tlink" href="#/about">More about us</a>
+      </div>
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/02.png" alt="Yuki &amp; White cleaning team at work in a Singapore office" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Routine -->
+  <section class="section section--paper">
+    <div class="wrap split split--reverse">
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/cleaning-img.png" alt="Workstation being wiped down during a routine office clean" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Every visit</span>
+        <h2>What a routine clean covers.</h2>
+        <p>The same list, in the same order, every time — so nothing depends on who is rostered that day.</p>
+        <ul class="checklist">
+          <li>Trash, recycling and shredder bins emptied</li>
+          <li>High-touch surfaces disinfected</li>
+          <li>Floors swept, mopped and vacuumed</li>
+          <li>Washrooms washed, brushed and restocked</li>
+          <li>Workstations, desks and chairs dusted</li>
+          <li>Glass panels, doors and handles wiped</li>
+          <li>Pantry sink, counters and appliances cleaned</li>
+          <li>Phones, keyboards and handsets sanitised</li>
+          <li>Dispensers and supplies replenished</li>
+          <li>Indoor plants watered to schedule</li>
+        </ul>
+        <div class="btn-row"><a class="btn btn--ghost" href="#/services" data-anchor="checklist">See the full checklist</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Renovation -->
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Also available</span>
+        <h2>Renovation and built-in projects.</h2>
+        <p>Offices change shape. When yours does, the team that already knows your floor can handle the work.</p>
+        <ul class="checklist" style="columns:1">
+          <li>Remodelling and redesigning office layouts</li>
+          <li>Make-shift studios and meeting spaces</li>
+          <li>Rebuilding pantry areas and cafeteria space</li>
+          <li>Movable and fixed partitions</li>
+          <li>Reception counters, fixtures and fittings</li>
+        </ul>
+        <div class="btn-row"><a class="btn btn--ghost" href="#/contact">Talk to us about a project</a></div>
+      </div>
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/04.png" alt="Office renovation and built-in fit-out work" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="band">
+    <div class="wrap">
+      <h2>Tell us about your floor.</h2>
+      <p>Send us your office size, your operating hours and how often you would like us in. We will come back with a schedule and a price.</p>
+      <a class="btn" href="#/contact">Request a quote</a>
+    </div>
+  </section>
+
+
+</div>
+<div class="view" id="view-about" role="region" aria-label="about">
+
+  <section class="page-head wrap">
+    <div class="reveal">
+      <span class="eyebrow"><span class="kanji">雪</span>About us</span>
+      <h1>Cleaning Singapore offices since 1999.</h1>
+      <p class="lede">Yuki &amp; White @ Up-Services is a commercial cleaning company built on long relationships — with our clients, and with the people who do the work.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Welcome to Yuki &amp; White</span>
+        <h2>The measures are already in place.</h2>
+        <p>For over twenty years we have provided office and commercial cleaning island-wide. What began as an office cleaning company has since grown to include office renovation, fogging and disinfecting, and a dedicated indoor plant business.</p>
+        <p>When you engage us as your commercial cleaning company, you inherit the systems we have spent two decades refining — the right measures in place to maintain and uphold a healthy, safe working environment.</p>
+        <p>We believe in service excellence and customer satisfaction. Our team is carefully selected so that what we promise is what arrives on your floor.</p>
+      </div>
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/02.png" alt="Yuki &amp; White cleaner servicing a Singapore office" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">How we work</span>
+        <h2>Three commitments, unchanged since 1999.</h2>
+      </div>
+      <div class="grid-3 reveal">
+        <article class="card">
+          <h3>Trust</h3>
+          <p>Every cleaner is pre-screened and locally hired. They hold keys, access cards and after-hours entry to your premises — so who we send matters more than anything else we do.</p>
+        </article>
+        <article class="card">
+          <h3>Safety</h3>
+          <p>We are fully licensed and insured. Staff complete training before they are assigned, and continue attending sessions to keep their skills current.</p>
+        </article>
+        <article class="card">
+          <h3>Efficiency</h3>
+          <p>A fixed scope, a fixed schedule, and a team that already knows your floor. No re-explaining the job every quarter.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap split split--reverse">
+      <div class="split-media split-media--tall reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2022/01/iStock-1125032160-1-858x1024.png" alt="Cleaner disinfecting a high-touch office surface" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Our people</span>
+        <h2>We keep our staff, so you keep your cleaner.</h2>
+        <p>We treat our employees as colleagues rather than headcount — fair wages, real benefits, and job-relevant courses for both full-time and part-time staff.</p>
+        <p>The result is a very high retention rate. Many of our cleaners have been with us for more than a decade, and clients who joined us in our early years are still with us today. That continuity is what makes consistent service possible.</p>
+        <div class="btn-row"><a class="btn" href="#/contact">Work with us</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Scope of work</span>
+        <h2>What our cleaning duties cover.</h2>
+        <p class="lede">Every schedule is customised to your office needs and operating hours — daily, thrice weekly, twice weekly or once weekly.</p>
+        <ul class="checklist">
+          <li>Clearing all garbage, rubbish and trash</li>
+          <li>Disinfecting high-touch surfaces</li>
+          <li>Mopping floors</li>
+          <li>Vacuuming floors and carpet</li>
+          <li>Washing and brushing washrooms</li>
+          <li>Wiping windows and glass panels</li>
+          <li>Dusting all workstations</li>
+          <li>Sanitising telephones and handsets</li>
+          <li>Emptying the shredder machine</li>
+          <li>Scrubbing pantry sinks and fixtures</li>
+          <li>Replenishing stock and supplies</li>
+          <li>Watering indoor plants to schedule</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Twenty years is a long reference list.</h2>
+      <p>We would be glad to walk your floor and show you what we would do with it.</p>
+      <a class="btn" href="#/contact">Arrange a site visit</a>
+    </div>
+  </section>
+
+</div>
+<div class="view" id="view-services" role="region" aria-label="services">
+
+  <section class="page-head wrap">
+    <div class="reveal">
+      <span class="eyebrow"><span class="kanji">雪</span>Our services</span>
+      <h1>One-stop cleaning and disinfecting for commercial offices.</h1>
+      <p class="lede">Our core business is maintaining a fresh-air workplace. Everything below can run on one contract, one schedule and one point of contact.</p>
+    </div>
+  </section>
+
+  <section class="section" id="office">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">01 — Office cleaning</span>
+        <h2>Cleaning on your schedule, not ours.</h2>
+        <p>We provide office cleaning on a daily, thrice-weekly, twice-weekly or weekly basis to commercial offices across Singapore, and have done so for more than twenty years.</p>
+        <p>We are a fully licensed and insured company. Our cleaners are local hires who complete training before being assigned to a site, so they understand both the job scope and the safety requirements of your premises.</p>
+        <p>Regular cleaning removes viruses that settle on surfaces and helps maintain a healthy working environment. The maintenance and cleanliness of your premises also does quiet work on your organisation's image — clients notice.</p>
+        <div class="btn-row"><a class="btn" href="#/contact">Get a cleaning quote</a></div>
+      </div>
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/cleaning-img1.png" alt="Office cleaning in progress" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="checklist">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Routine cleaning checklist</span>
+        <h2>The same standard, every visit.</h2>
+        <p class="lede">A written scope means nothing is left to interpretation — and nothing depends on who is rostered that day.</p>
+      </div>
+      <div class="split reveal" style="margin-top:3rem">
+        <div>
+          <h3 style="margin-bottom:1rem">General areas and workstations</h3>
+          <ul class="checklist" style="columns:1">
+            <li>Trash emptied; recycling and shredder bins cleared</li>
+            <li>Workstations, desks, chairs and countertops wiped</li>
+            <li>Conference rooms and reception counters cleaned</li>
+            <li>Hard floors swept and mopped; carpet vacuumed</li>
+            <li>Water dispensers and cubicles cleaned</li>
+            <li>Telephones, keyboards, mice and cabling sanitised</li>
+            <li>Company signage, handrails and staircase rails dusted</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1rem">Washrooms, pantry and entry points</h3>
+          <ul class="checklist" style="columns:1">
+            <li>Pantry sink, faucet and coffee machine area washed down</li>
+            <li>Food scraps cleared to deter pests and mould</li>
+            <li>Beverages and snacks left tidy and organised</li>
+            <li>Washrooms washed, mirrors polished, fixtures sanitised</li>
+            <li>Toilet paper, hand soap and paper towel restocked</li>
+            <li>Door handles, knobs, push bars and main glass disinfected</li>
+            <li>Glass panels and glass doors cleaned</li>
+          </ul>
+        </div>
+      </div>
+      <p class="lede reveal" style="margin-top:2.5rem">The office is cleaned and sanitised in full before our team leaves for the day.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="carpet">
+    <div class="wrap split split--reverse">
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/cleaning-img2.png" alt="Carpet shampooing in an office" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">02 — Carpet shampooing</span>
+        <h2>Carpet that looks, smells and feels new.</h2>
+        <p>We offer professional carpet cleaning using top-tier equipment and materials that lift soil out of the fibre and neutralise the odours held in it — rather than masking them.</p>
+        <p>Most offices book carpet shampooing once or twice a year, timed around a long weekend or a company shutdown so the floor is dry and back in use by Monday.</p>
+        <div class="btn-row"><a class="btn btn--ghost" href="#/contact">Ask about carpet shampooing</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="disinfect">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">03 — Fogging &amp; disinfecting</span>
+        <h2>A full-floor reset when you need one.</h2>
+        <p>Cleaning and disinfecting surfaces reduces the risk of infection spreading through an office. We provide scheduled disinfecting of high-touch points as part of routine cleaning, and standalone fogging for a whole-premises treatment.</p>
+        <p>Fogging is usually arranged after hours or over a weekend, so your team returns to a treated floor without losing a working day.</p>
+        <div class="btn-row"><a class="btn btn--ghost" href="#/contact">Arrange disinfecting</a></div>
+      </div>
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/cleaning-img.png" alt="Disinfecting high-touch office surfaces" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="plants">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">04 — Indoor plants</span>
+        <h2>Greenery nobody has to remember.</h2>
+        <p class="lede">We supply, place and maintain indoor pot plants for offices — chosen for the light your floor actually gets, and watered on the same schedule as your clean.</p>
+      </div>
+      <div class="grid-3 reveal">
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2021/10/p8-247x296.png" alt="Monstera Deliciosa" loading="lazy" style="height:auto;max-height:180px">
+          <h3>Monstera Deliciosa</h3>
+          <p>Approx. height 40&ndash;50cm. A resilient choice for reception counters and meeting rooms with indirect light.</p>
+        </article>
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2021/10/p7-247x296.png" alt="Ficus Elastica" loading="lazy" style="height:auto;max-height:180px">
+          <h3>Ficus Elastica</h3>
+          <p>Approx. height 1&ndash;1.5m. A floor-standing plant that fills a corner or softens a partition edge.</p>
+        </article>
+        <article class="card">
+          <img src="https://yuki.com.sg/wp-content/uploads/2021/10/icon-2.png" alt="" loading="lazy">
+          <h3>Placement &amp; upkeep</h3>
+          <p>We advise on species and position, deliver and place the pots, then keep them watered and rotated as part of your regular visit.</p>
+          <a class="tlink" href="#/contact">Ask about plants</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="renovation">
+    <div class="wrap split split--reverse">
+      <div class="split-media reveal">
+        <img src="https://yuki.com.sg/wp-content/uploads/2021/10/04.png" alt="Office renovation and built-in project" loading="lazy">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">05 — Renovation &amp; built-ins</span>
+        <h2>When the floor plan changes.</h2>
+        <ul class="checklist" style="columns:1">
+          <li>Revamping, remodelling and redesigning office layouts</li>
+          <li>Make-shift studios and temporary spaces</li>
+          <li>Rebuilding pantry areas and office cafeteria space</li>
+          <li>Partitions, movable or fixed</li>
+          <li>Reception counters, fixtures and fittings</li>
+        </ul>
+        <div class="btn-row"><a class="btn btn--ghost" href="#/contact">Discuss a project</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Not sure which schedule fits?</h2>
+      <p>Tell us your floor area, headcount and operating hours. We will recommend a frequency and scope, and price it clearly.</p>
+      <a class="btn" href="#/contact">Request a quote</a>
+    </div>
+  </section>
+
+</div>
+<div class="view" id="view-faq" role="region" aria-label="faq">
+
+  <section class="page-head wrap">
+    <div class="reveal">
+      <span class="eyebrow"><span class="kanji">雪</span>Frequently asked</span>
+      <h1>Questions we are asked before every contract.</h1>
+      <p class="lede">If yours is not here, call us on +65 9452 3008 — a straight answer takes about two minutes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="faq reveal">
+
+        <details open>
+          <summary>How often will you clean my office?</summary>
+          <div class="answer"><p>As often as you need. We run daily, thrice-weekly, twice-weekly and once-weekly schedules, and we work out the frequency around your operating hours rather than a fixed package. Most mid-sized offices settle on three times a week.</p></div>
+        </details>
+
+        <details>
+          <summary>Are you licensed and insured?</summary>
+          <div class="answer"><p>Yes. Yuki &amp; White is a fully licensed and insured cleaning company. Insurance details can be provided with your quotation for your own records or landlord submission.</p></div>
+        </details>
+
+        <details>
+          <summary>Who will be cleaning my premises?</summary>
+          <div class="answer"><p>Local staff, employed by us. Every cleaner is pre-screened and completes a training period before being assigned to a site, and continues attending sessions to keep their skills current. Because our retention is high, you generally keep the same cleaner month after month.</p></div>
+        </details>
+
+        <details>
+          <summary>Can you clean outside office hours?</summary>
+          <div class="answer"><p>Yes. Early morning, evening and weekend slots are all common. We schedule around your business so cleaning does not compete with your working day.</p></div>
+        </details>
+
+        <details>
+          <summary>What exactly is included in a routine clean?</summary>
+          <div class="answer"><p>Trash and shredder bins, floors, washrooms, pantry, workstations, glass and high-touch surfaces, plus restocking of dispensers and watering of indoor plants. The full written checklist is on our <a href="#/services" data-anchor="checklist">Services page</a>, and your final scope is confirmed in the quotation.</p></div>
+        </details>
+
+        <details>
+          <summary>Do you supply the cleaning materials and consumables?</summary>
+          <div class="answer"><p>We bring our own equipment and cleaning materials. Consumables such as toilet paper, hand soap and paper towel can either be supplied by us or bought by you and replenished by our team — whichever you prefer. We will price both ways.</p></div>
+        </details>
+
+        <details>
+          <summary>Do you handle disinfecting and fogging?</summary>
+          <div class="answer"><p>Yes. Disinfecting of high-touch surfaces is part of routine cleaning. Whole-premises fogging is a separate service, usually scheduled after hours or over a weekend so no working day is lost.</p></div>
+        </details>
+
+        <details>
+          <summary>How often should office carpet be shampooed?</summary>
+          <div class="answer"><p>Once or twice a year for most offices, more often in high-traffic reception areas. We use extraction equipment that removes soil and neutralises odour from the fibre, and we time the job so the carpet is dry before your team returns.</p></div>
+        </details>
+
+        <details>
+          <summary>Do you also supply and maintain indoor plants?</summary>
+          <div class="answer"><p>We do. We advise on species for your light conditions, deliver and place the pots, and water them on the same schedule as your clean. Popular choices include Monstera Deliciosa and Ficus Elastica.</p></div>
+        </details>
+
+        <details>
+          <summary>Which parts of Singapore do you cover?</summary>
+          <div class="answer"><p>Island-wide. We have serviced commercial premises across Singapore since 1999, from single-floor offices in the CBD to larger multi-unit sites.</p></div>
+        </details>
+
+        <details>
+          <summary>Is there a minimum contract?</summary>
+          <div class="answer"><p>Regular cleaning is normally set up as an ongoing monthly service so that you keep the same team and the same schedule. One-off jobs — carpet shampooing, fogging, post-renovation cleaning — can be booked on their own.</p></div>
+        </details>
+
+        <details>
+          <summary>How do I get a quotation?</summary>
+          <div class="answer"><p>Send us your floor area, headcount, operating hours and preferred frequency through the <a href="#/contact">contact form</a>, or call +65 6336 8055. For most offices we arrange a short site visit first, then quote a fixed monthly fee with the scope written out.</p></div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Still deciding?</h2>
+      <p>Ask us anything — including the awkward questions about pricing and staff turnover. We would rather answer them now.</p>
+      <a class="btn" href="#/contact">Contact us</a>
+    </div>
+  </section>
+
+</div>
+<div class="view" id="view-contact" role="region" aria-label="contact">
+
+  <section class="page-head wrap">
+    <div class="reveal">
+      <span class="eyebrow"><span class="kanji">雪</span>Contact us</span>
+      <h1>Get in touch.</h1>
+      <p class="lede">Take a moment to complete the form and we will come back to you shortly. If it is urgent, please call — we answer the phone.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+
+      <div class="reveal">
+        <div class="info-block">
+          <h3>Office</h3>
+          <address>
+            100 Peck Seah St<br>
+            #08-14 PS100<br>
+            Singapore 079333
+          </address>
+        </div>
+        <div class="info-block">
+          <h3>Telephone</h3>
+          <p><a href="tel:+6594523008">+65 9452 3008</a><br>
+             <a href="tel:+6563368055">+65 6336 8055</a></p>
+        </div>
+        <div class="info-block">
+          <h3>Email</h3>
+          <p><a href="mailto:services@yuki.com.sg">services@yuki.com.sg</a></p>
+        </div>
+        <div class="info-block">
+          <h3>Hours</h3>
+          <p>Monday to Friday, 9.00am &ndash; 6.00pm<br>Cleaning schedules run outside these hours by arrangement.</p>
+        </div>
+        <div class="map">
+          <iframe title="Yuki &amp; White office location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=100%20Peck%20Seah%20Street%20PS100%20Singapore%20079333&amp;output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form class="form" id="enquiry" method="POST" action="https://api.web3forms.com/submit">
+          <!-- Replace PASTE_YOUR_ACCESS_KEY with a free key from web3forms.com -->
+          <input type="hidden" name="access_key" value="PASTE_YOUR_ACCESS_KEY">
+          <input type="hidden" name="subject_line" value="New enquiry from yuki.com.sg">
+          <input type="hidden" name="redirect" value="">
+          <p class="hp"><label>Do not fill this in: <input name="company-website" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="subject">What can we help with?</label>
+            <select id="subject" name="subject">
+              <option>Office cleaning</option>
+              <option>Carpet shampooing</option>
+              <option>Fogging &amp; disinfecting</option>
+              <option>Indoor plants</option>
+              <option>Renovation &amp; built-ins</option>
+              <option>Something else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="frequency">Preferred frequency</label>
+            <select id="frequency" name="frequency">
+              <option>Daily</option>
+              <option>Three times weekly</option>
+              <option>Twice weekly</option>
+              <option>Once weekly</option>
+              <option>One-off job</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Floor area, headcount, operating hours &mdash; anything that helps us quote accurately."></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send enquiry</button>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Prefer to talk it through?</h2>
+      <p>Call +65 6336 8055 during office hours and ask for a site visit. There is no charge for the visit or the quotation.</p>
+      <a class="btn" href="tel:+6563368055">Call +65 6336 8055</a>
+    </div>
+  </section>
+
+</div>
+<div class="view" id="view-thanks" role="region" aria-label="thanks">
+
+  <section class="page-head wrap" style="border-bottom:0;padding-bottom:0">
+    <div class="reveal">
+      <span class="eyebrow"><span class="kanji">雪</span>Enquiry received</span>
+      <h1>Thank you — we have your message.</h1>
+      <p class="lede">A member of our team will be in touch shortly, usually within one working day. If your enquiry is urgent, call us on <a href="tel:+6563368055">+65 6336 8055</a>.</p>
+      <div class="btn-row">
+        <a class="btn" href="#/home">Back to home</a>
+        <a class="btn btn--ghost" href="#/services">Browse our services</a>
+      </div>
+    </div>
+  </section>
+  <section class="section"></section>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-mark">Yuki &amp; White</div>
+          <p>Commercial office cleaning across Singapore since 1999. Licensed, insured, and staffed by a team that stays.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/about">About us</a></li>
+            <li><a href="#/services">Services</a></li>
+            <li><a href="#/faq">FAQ</a></li>
+            <li><a href="#/contact">Contact us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#/services" data-anchor="office">Office cleaning</a></li>
+            <li><a href="#/services" data-anchor="carpet">Carpet shampooing</a></li>
+            <li><a href="#/services" data-anchor="plants">Indoor plants</a></li>
+            <li><a href="#/services" data-anchor="disinfect">Fogging &amp; disinfecting</a></li>
+            <li><a href="#/services" data-anchor="renovation">Renovation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address>
+            100 Peck Seah St<br>#08-14 PS100<br>Singapore 079333<br><br>
+            <a href="tel:+6594523008">+65 9452 3008</a><br>
+            <a href="tel:+6563368055">+65 6336 8055</a><br>
+            <a href="mailto:services@yuki.com.sg">services@yuki.com.sg</a>
+          </address>
+        </div>
+      </div>
+    <div class="foot-base">
+      <span>&copy; <span data-year>2026</span> Yuki &amp; White. All rights reserved.</span>
+      <span>Singapore</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var TITLES = {
+    home:     'Yuki & White — Office Cleaning Services in Singapore Since 1999',
+    about:    'About Us — Yuki & White | Office Cleaning Singapore',
+    services: 'Our Services — Office Cleaning, Carpet Shampooing & Disinfecting | Yuki & White',
+    faq:      'FAQ — Office Cleaning Questions Answered | Yuki & White',
+    contact:  'Contact Us — Yuki & White | Office Cleaning Singapore',
+    thanks:   'Thank You — Yuki & White'
+  };
+
+  var views = document.querySelectorAll('.view');
+  var navLinks = document.querySelectorAll('.nav a[data-route]');
+  var io = null;
+
+  if (!reduce && 'IntersectionObserver' in window) {
+    io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  }
+
+  function show(route, anchor, instant) {
+    if (!TITLES[route]) { route = 'home'; }
+    Array.prototype.forEach.call(views, function (v) {
+      v.classList.toggle('is-active', v.id === 'view-' + route);
+    });
+    Array.prototype.forEach.call(navLinks, function (a) {
+      if (a.getAttribute('data-route') === route) { a.setAttribute('aria-current', 'page'); }
+      else { a.removeAttribute('aria-current'); }
+    });
+    document.title = TITLES[route];
+
+    var active = document.getElementById('view-' + route);
+    var reveals = active.querySelectorAll('.reveal');
+    Array.prototype.forEach.call(reveals, function (el) {
+      if (io) { el.classList.remove('is-in'); io.observe(el); }
+      else { el.classList.add('is-in'); }
+    });
+
+    if (anchor) {
+      var target = active.querySelector('#' + anchor);
+      if (target) {
+        window.requestAnimationFrame(function () {
+          var top = target.getBoundingClientRect().top + window.pageYOffset - 100;
+          window.scrollTo({ top: top, behavior: reduce || instant ? 'auto' : 'smooth' });
+        });
+        return;
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  function parse() {
+    var h = (location.hash || '#/home').replace(/^#\//, '');
+    return h.split('#')[0] || 'home';
+  }
+
+  var pendingAnchor = null;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#/"]') : null;
+    if (a) { pendingAnchor = a.getAttribute('data-anchor') || null; }
+  });
+
+  window.addEventListener('hashchange', function () {
+    show(parse(), pendingAnchor, false);
+    pendingAnchor = null;
+  });
+
+  /* --- Mobile navigation --- */
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* --- Sticky header hairline --- */
+  var head = document.querySelector('.site-head');
+  if (head) {
+    var onScroll = function () { head.classList.toggle('is-stuck', window.scrollY > 12); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* --- Cleaning cadence rail --- */
+  var cadence = document.getElementById('cadence');
+  if (cadence) {
+    var opts = cadence.querySelectorAll('.cad-opt');
+    var days = cadence.querySelectorAll('.day');
+    var note = cadence.querySelector('.cadence-note');
+    var paint = function (btn) {
+      var picked = btn.getAttribute('data-days').split(',');
+      Array.prototype.forEach.call(days, function (day, i) {
+        var on = picked.indexOf(String(i)) !== -1;
+        var apply = function () { day.classList.toggle('is-visit', on); };
+        if (reduce) { apply(); } else { setTimeout(apply, i * 55); }
+      });
+      if (note) { note.textContent = btn.getAttribute('data-note'); }
+      Array.prototype.forEach.call(opts, function (o) {
+        var isOn = o === btn;
+        o.classList.toggle('is-on', isOn);
+        o.setAttribute('aria-pressed', isOn ? 'true' : 'false');
+      });
+    };
+    Array.prototype.forEach.call(opts, function (b) {
+      b.addEventListener('click', function () { paint(b); });
+    });
+    paint(cadence.querySelector('.cad-opt.is-on') || opts[0]);
+  }
+
+  /* --- Enquiry form --- */
+  var form = document.getElementById('enquiry');
+  if (form) {
+    var key = form.querySelector('[name="access_key"]');
+    var redirect = form.querySelector('[name="redirect"]');
+    if (redirect) {
+      redirect.value = location.origin + location.pathname + '#/thanks';
+    }
+    form.addEventListener('submit', function (e) {
+      if (key && key.value === 'PASTE_YOUR_ACCESS_KEY') {
+        e.preventDefault();
+        var msg = document.getElementById('formMsg');
+        if (msg) {
+          msg.textContent = 'This form needs an access key before it can send. Add one from web3forms.com to the access_key field.';
+        }
+      }
+    });
+  }
+
+  /* --- Year stamp --- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-year]'), function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+  show(parse(), null, true);
+})();
+
+</script>
+</body>
+</html>
